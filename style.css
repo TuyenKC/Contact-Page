@@ -1,0 +1,96 @@
+html{
+    font-size: 62.5%;
+    font-family: "Be Vietnam Pro", serif;
+}
+body{
+    background-image: url("./bg-image.svg");
+    color: white;
+    width: 128rem;
+}
+.logo{
+    margin-top: 1.6rem;
+    margin-left: 7.2rem;
+}
+.form{
+    width: 81.2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.form--title{
+    font-weight: bold;
+    font-size: 6.4rem;
+}
+.form--desc{
+    font-size: 3.2rem;
+}
+
+.form--input__container{
+    background-color: #9b5ab6;
+    border-radius: 1.2rem;
+}
+.form--input{
+    padding: 1.2rem 1.2rem;
+}
+.input{
+    padding: 2.4rem 2.4rem;
+    border-radius: 1.2rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    font-family: "Be Vietnam Pro", serif;
+}
+.input--email, .input--message, .input--name , .input--size, .input--subject{
+    display: flex;
+    flex-direction: column;
+}
+.input--email label, .input--message label, .input--name label , .input--size label, .input--subject label{
+    margin-bottom: 0.4rem;
+    font-size: 1.4rem;
+}
+.input--message textarea{
+    resize: vertical;
+}
+.btn{
+    grid-area: 5 / 1 / 6 / 4;
+}
+.btn{
+    color: #4036A9;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 1.2rem;
+}
+@media screen and (max-width: 1280px) {
+    .form--input{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5,1fr);
+        gap: 10px;
+    }
+    .input--name{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .input--email{
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .input--size{
+        grid-area: 2 / 1 / 3 / 2;
+    } 
+    .input--subject{
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    .input--message{
+        grid-area: 3 / 1 / 5 / 3;
+    }   
+}
+@media screen and (max-width: 640px){
+    .html{
+        font-size: 25%;
+    }
+    .form--input{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
